@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 20px;
+}
+
+.item {
+    background-color: gold;
+    border: 1px solid grey;
+    box-sizing: border-box;
+    min-height: 50px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+}
+
+/*
+item-5 sẽ chiếm từ line số 2 đến line số 4 (theo col)
+item-5 sẽ chiếm từ line số 2 đến line số 4 (theo row)
+*/
+/* .item-5 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    grid-row-start: 2;
+    grid-row-end: 4;
+} */
+
+/*
+thay vì viết dài như trên css cung cấp 1 cách viến ngắn gọn hơn
+*/
+.item-5 {
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+
+.item-4 {
+    grid-row: 2/5;
+}
+
+/*===> cách phân bổ grid item theo grid line*/

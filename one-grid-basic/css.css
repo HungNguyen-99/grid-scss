@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 20px;
+}
+
+.item {
+    background-color: gold;
+    border: 1px solid grey;
+    box-sizing: border-box;
+    min-height: 50px;
+}
+
+/*set đơn vị tuyệt đối*/
+/* .container {
+    display: grid;
+    grid-template-columns: 300px 100px 200px;
+    grid-template-rows: 100px 200px 100px;
+} */
+
+/*set đơn vị tương đối*/
+/* .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px 200px 100px;
+} */
+
+/*
+    set đơn vị tương đối kết hợp với tuyệt đối
+    (full widtd - 50px) / 3 => col2 take 2 phần , col3 take 1 phần
+*/
+/* .container {
+    display: grid;
+    grid-template-columns: 50px 2fr 1fr;
+    grid-template-rows: 100px 200px 100px;
+} */
+
+/*
+thay vì set đơn vị tương đối cho cả 3 col
+ta có thể sử dụng hàm repeat()
+*/
+/* .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 200px 100px;
+} */
+
+/*
+nếu thêm tham số trong hàm repeat(4, 1fr 2fr)
+thì nó sẽ lặp lại 4 lần với mỗi lần là 2 col
+=> ta sẽ có 8 col
+*/
+/* .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr 2fr);
+    grid-template-rows: 100px 200px 100px;
+} */
+
+/*
+xử lý row tự động (set cứng)
+*/
+/* .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+} */
+
+/*
+xử lý row tự động (set minmax())
+*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+}
